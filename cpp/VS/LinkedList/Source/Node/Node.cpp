@@ -1,5 +1,11 @@
-// pch.cpp: source file corresponding to pre-compiled header; necessary for compilation to succeed
-
 #include "Node.h"
 
-// In general, ignore this file, but keep it around if you are using pre-compiled headers.
+using namespace Nodes;
+
+void Nodes::NodeInsertAtHead(pNode &head, int data)
+{
+	pNode pNew = new Node;
+	pNew->data = data;
+	pNew->link = head;
+	head = pNew;
+}
